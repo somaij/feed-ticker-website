@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FeedTicker</title>
+  <meta name="description" content="FeedTicker is an Android home-screen widget that shows headlines from your RSS and Atom feeds one at a time. It is designed for minimalist launchers. No accounts, no ads, no tracking.">
+  <meta property="og:title" content="FeedTicker">
+  <meta property="og:description" content="Headlines from your feeds, one at a time, on a quiet home screen.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/figtree-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css?v=6">
+  <script src="assets/theme.js?v=5"></script>
+  <script src="assets/site.js?v=5" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="page">
+    <header class="top-bar">
+      <a class="brand" href="./" aria-current="page"><img src="assets/img/favicon.svg" alt="" width="32" height="32">FeedTicker</a>
+      <nav class="nav" aria-label="Main">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.1A8.5 8.5 0 1 1 9.9 3.5a6.6 6.6 0 0 0 10.6 10.6z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="by">An Android widget by Calm Kraken Studios</p>
+          <h1>FeedTicker</h1>
+          <p class="lede">Headlines from your feeds, one at a time, on a quiet home screen.</p>
+          <p class="detail">Designed to fit Niagara Launcher and other minimalist home screens. Tap a headline to read it in your browser.</p>
+
+          <div class="cta">
+            <!-- Replace PLACEHOLDER with the Play Store URL and swap the image for
+                 the official badge PNG from https://play.google.com/intl/en_us/badges/
+                 Don't redraw, recolour or crop the badge. -->
+            <a class="play-badge" href="PLACEHOLDER">
+              <img src="assets/img/google-play-badge.svg" alt="Get it on Google Play" width="186" height="56">
+            </a>
+            <ul class="chips" aria-label="Availability">
+              <li>In closed testing</li>
+              <li>Android 8.0+</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phone">
+            <div class="screen">
+              <div class="home-clock" aria-hidden="true">
+                <div class="time">10:24</div>
+                <div class="date">Wed, Sep 23</div>
+              </div>
+
+              <div class="widget" data-widget-demo data-style="niagara" role="group" aria-label="Widget demo with example headlines">
+                <div class="arrows">
+                  <button type="button" data-prev aria-label="Previous headline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
+                  <button type="button" data-next aria-label="Next headline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+                </div>
+                <div class="body" aria-live="off">
+                  <div class="item">
+                    <div class="meta">
+                      <span class="source">/r/space</span>
+                      <span class="tools">
+                        <button type="button" data-refresh aria-label="Refresh headlines"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg></button>
+                        <span class="count" aria-hidden="true">1 / 5</span>
+                      </span>
+                    </div>
+                    <p class="headline">Amateur astronomers catch a comet's tail splitting in two</p>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="apps" aria-hidden="true">
+                <li><span class="icon"></span>Browser</li>
+                <li><span class="icon"></span>Mail</li>
+                <li><span class="icon"></span>Messages</li>
+                <li><span class="icon"></span>Maps</li>
+                <li><span class="icon"></span>Phone</li>
+                <li><span class="icon"></span>Photos</li>
+                <li><span class="icon"></span>Music</li>
+                <li><span class="icon"></span>Notes</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="try">
+          <div>
+            <p class="label" id="style-label">Widget style</p>
+            <div class="segmented" role="group" aria-labelledby="style-label">
+              <button type="button" data-widget-style="pixel" aria-pressed="false">Pixel</button>
+              <button type="button" data-widget-style="niagara" aria-pressed="true">Niagara</button>
+            </div>
+          </div>
+          <div>
+            <p class="label" id="wall-label">Wallpaper colour</p>
+            <div class="swatches" role="radiogroup" aria-labelledby="wall-label">
+              <button type="button" class="swatch" role="radio" data-hue="190" aria-label="Teal"></button>
+              <button type="button" class="swatch" role="radio" data-hue="255" aria-label="Blue"></button>
+              <button type="button" class="swatch" role="radio" data-hue="300" aria-label="Violet"></button>
+              <button type="button" class="swatch" role="radio" data-hue="10" aria-label="Rose"></button>
+              <button type="button" class="swatch" role="radio" data-hue="75" aria-label="Amber"></button>
+              <button type="button" class="swatch" role="radio" data-hue="140" aria-label="Green"></button>
+            </div>
+          </div>
+          <p class="hint">Try the arrows on the widget. The headlines are made up, and the page takes its colours from the wallpaper you pick. <button type="button" class="link-button" data-demo-pause hidden aria-pressed="false">Pause demo</button></p>
+        </div>
+      </div>
+
+      <div class="statement">
+        <p>Not an RSS reader. <span class="quiet">No article view, no accounts, no sync, no algorithmic feed. It shows the latest headlines from the feeds you pick, one at a time. Tap one that catches your eye to open it in your browser.</span></p>
+      </div>
+
+      <section class="sheet" aria-labelledby="shots-title">
+        <h2 id="shots-title">On the home screen</h2>
+        <div class="shots">
+          <figure>
+            <img src="assets/img/shots/home-transparent-540.webp" srcset="assets/img/shots/home-transparent-540.webp 540w, assets/img/shots/home-transparent-1080.webp 1080w" sizes="(min-width: 48rem) 320px, 64vw" alt="A beach wallpaper with a large clock, the FeedTicker widget showing a headline from r/cars in white text with no background, and a list of apps below." width="540" height="1137" loading="lazy">
+            <figcaption>Transparent by default, so it sits right on the wallpaper.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/shots/home-preset-540.webp" srcset="assets/img/shots/home-preset-540.webp 540w, assets/img/shots/home-preset-1080.webp 1080w" sizes="(min-width: 48rem) 320px, 64vw" alt="The same home screen with the widget on a dark rounded background and the headline in bold amber text." width="540" height="1137" loading="lazy">
+            <figcaption>Presets add a background and accent colour.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/shots/settings-540.webp" srcset="assets/img/shots/settings-540.webp 540w, assets/img/shots/settings-1080.webp 1080w" sizes="(min-width: 48rem) 320px, 64vw" alt="The Ticker settings screen: a field for adding feeds, two added feeds, style previews, font choices and Advanced sliders for text size, padding, arrows and background opacity." width="540" height="1137" loading="lazy">
+            <figcaption>Add feeds, pick a look and fine-tune it in Advanced settings.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sheet" aria-labelledby="features-title">
+        <h2 id="features-title">Features, A to Z</h2>
+        <div class="drawer">
+          <ol class="groups">
+            <li class="group" id="f-a">
+              <span class="letter" aria-hidden="true">A</span>
+              <ul>
+                <li><h3>Add any site</h3><p>Paste a site's address and FeedTicker finds its feed. Or type a subreddit like <code>r/space</code>.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-b">
+              <span class="letter" aria-hidden="true">B</span>
+              <ul>
+                <li><h3>Battery-friendly</h3><p>Android handles the flipping. There are no timers running and no foreground services.</p></li>
+                <li><h3>Blends into your wallpaper</h3><p>The background is transparent and the text is monochrome by default, so the widget looks like part of your home screen.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-f">
+              <span class="letter" aria-hidden="true">F</span>
+              <ul>
+                <li><h3>Flips on its own</h3><p>Headlines change automatically every 10 seconds to 2 minutes. Previous, next and refresh buttons sit on the widget.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-m">
+              <span class="letter" aria-hidden="true">M</span>
+              <ul>
+                <li><h3>Material You</h3><p>On Android 12 and newer, the widget can take its colours from your wallpaper.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-o">
+              <span class="letter" aria-hidden="true">O</span>
+              <ul>
+                <li><h3>Offline, from cache</h3><p>Headlines refresh in the background about every 30 minutes. The widget shows what's cached and never waits on the network.</p></li>
+                <li><h3>Optional details</h3><p>Show the source name and a short article preview under each headline, or keep it to the headline alone.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-s">
+              <span class="letter" aria-hidden="true">S</span>
+              <ul>
+                <li><h3>Style presets</h3><p>Presets that match popular minimalist home-screen looks.</p></li>
+              </ul>
+            </li>
+            <li class="group" id="f-u">
+              <span class="letter" aria-hidden="true">U</span>
+              <ul>
+                <li><h3>Unlimited widgets</h3><p>Add as many as you like. Each one has its own feeds and style.</p></li>
+              </ul>
+            </li>
+          </ol>
+
+          <nav class="index" aria-label="Jump to letter">
+            <a href="#f-a">A</a><a href="#f-b">B</a><span aria-hidden="true">C</span><span aria-hidden="true">D</span><span aria-hidden="true">E</span><a href="#f-f">F</a><span aria-hidden="true">G</span><span aria-hidden="true">H</span><span aria-hidden="true">I</span><span aria-hidden="true">J</span><span aria-hidden="true">K</span><span aria-hidden="true">L</span><a href="#f-m">M</a><span aria-hidden="true">N</span><a href="#f-o">O</a><span aria-hidden="true">P</span><span aria-hidden="true">Q</span><span aria-hidden="true">R</span><a href="#f-s">S</a><span aria-hidden="true">T</span><a href="#f-u">U</a><span aria-hidden="true">V</span><span aria-hidden="true">W</span><span aria-hidden="true">X</span><span aria-hidden="true">Y</span><span aria-hidden="true">Z</span>
+          </nav>
+        </div>
+      </section>
+
+      <section class="sheet" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">Free, with a one-time unlock</h2>
+        <div class="tiers">
+          <div class="tier">
+            <h3>Free</h3>
+            <p class="price">No cost</p>
+            <ul>
+              <li>Up to 2 feeds</li>
+              <li>All style presets</li>
+              <li>Unlimited widgets</li>
+            </ul>
+          </div>
+          <div class="tier unlock">
+            <h3>Unlock</h3>
+            <p class="price">One-time purchase on Google Play</p>
+            <ul>
+              <li>Unlimited feeds</li>
+              <li>
+                <div>
+                  Advanced settings
+                  <div class="settings">
+                    <span>Background opacity</span>
+                    <span>Text size</span>
+                    <span>Padding</span>
+                    <span>Arrow size and spacing</span>
+                    <span>Fonts, including your own</span>
+                    <span>Bold headlines</span>
+                    <span>Colour theme</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="pricing-note">No subscription and no ads.</p>
+      </section>
+
+      <section class="sheet" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Does it work with my launcher?</summary>
+            <div class="answer"><p>FeedTicker is designed to fit Niagara Launcher, but it's an ordinary Android widget and works on any launcher that supports widgets. Some launchers don't let widgets flip on their own. If yours doesn't, use the arrows.</p></div>
+          </details>
+          <details>
+            <summary>What feeds can I add?</summary>
+            <div class="answer"><p>Any RSS or Atom feed. Paste a site's normal address and FeedTicker will look for its feed, paste a feed URL directly, or type a subreddit like <code>r/space</code>.</p></div>
+          </details>
+          <details>
+            <summary>Can I read articles in the app?</summary>
+            <div class="answer"><p>No, and that's on purpose. Tapping a headline opens the article in your browser.</p></div>
+          </details>
+          <details>
+            <summary>Is there a subscription?</summary>
+            <div class="answer"><p>No. The unlock is a one-time purchase through Google Play and there are no ads. If you reinstall or get a new phone, it restores automatically when you use the same Google account.</p></div>
+          </details>
+          <details>
+            <summary>Will it drain my battery?</summary>
+            <div class="answer"><p>No. Android handles the flipping. Headlines refresh in the background about every 30 minutes, and there are no always-on services.</p></div>
+          </details>
+          <details>
+            <summary>What data does it collect?</summary>
+            <div class="answer"><p>None. There's no account, no analytics, no ads and no tracking. The only network requests go to the feeds you add. Read the <a href="privacy.html">privacy policy</a>.</p></div>
+          </details>
+          <details>
+            <summary>Which Android versions are supported?</summary>
+            <div class="answer"><p>Android 8.0 and newer. Material You colours need Android 12 or newer.</p></div>
+          </details>
+        </div>
+        <p class="muted after-faq">More help on the <a href="support.html">support page</a>.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-label="Footer">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:calmkrakenstudios@gmail.com">calmkrakenstudios@gmail.com</a>
+      </nav>
+      <p>© 2026 Calm Kraken Studios. This site uses no cookies or analytics.</p>
+      <p>FeedTicker is an independent app. It is not affiliated with, sponsored by or endorsed by Niagara Launcher or Google. Niagara Launcher is a trademark of its owner. Android, Google Play, the Google Play logo and Material You are trademarks of Google LLC.</p>
+    </footer>
+  </div>
+</body>
+</html>
